@@ -4,3 +4,4 @@ uploads
 .env
 /coverage
 /dist
+.vscode

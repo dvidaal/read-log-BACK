@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dvidaal/read-log-BACK/issues"
   },
-  "homepage": "https://github.com/dvidaal/read-log-BACK#readme"
+  "homepage": "https://github.com/dvidaal/read-log-BACK#readme",
+  "dependencies": {
+    "mongoose": "^8.1.2"
+  }
 }
