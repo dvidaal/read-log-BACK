@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "start:dev": "node --watch src/server/startServer.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,9 @@
   },
   "homepage": "https://github.com/dvidaal/read-log-BACK#readme",
   "dependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
     "mongoose": "^8.1.2"
   }
 }
