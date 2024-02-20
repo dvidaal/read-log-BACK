@@ -2,7 +2,7 @@ import createDebug from "debug";
 import "../loadEnvironment.js";
 import { app } from "./app.js";
 
-const debug = createDebug("readlog:startServer");
+const debug = createDebug("read-log:startServer");
 
 const startServer = async (port) => {
   return new Promise((resolve) => {
