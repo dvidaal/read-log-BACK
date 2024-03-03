@@ -1,4 +1,3 @@
-import bcrypt from "bcryptjs";
 import User from "../../../database/models/Users/User.js";
 
 export const loginUser = async (req, res) => {
