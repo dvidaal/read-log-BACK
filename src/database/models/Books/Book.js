@@ -1,21 +1,27 @@
 import { Schema, model } from "mongoose";
 
 const bookSchema = new Schema({
-  title: {
+  Título: {
     type: String,
     required: true,
   },
-  author: {
+  Autora: {
     type: String,
     required: true,
   },
-  year: {
+  Año: {
     type: Number,
     required: true,
   },
-  score: {
+  Tipo: {
+    type: String,
+  },
+  Puntuación: {
     type: Number,
     required: true,
+  },
+  Nº: {
+    type: Number,
   },
 });
 
