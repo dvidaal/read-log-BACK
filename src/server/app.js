@@ -56,5 +56,6 @@ app.get("/", (req, res) => {
   res.send("<h1>Front Page Test</h1>");
 });
 
-app.use("/read-log", booksRouters);
+//app.use("/read-log", booksRouters);
+app.use("/api/books", booksRouters);
 app.use("/users", usersRouters);
