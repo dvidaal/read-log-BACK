@@ -17,7 +17,7 @@ const bookSchema = new Schema({
     type: String,
   },
   Puntuación: {
-    type: Number,
+    type: String,
     required: true,
   },
   Nº: {
