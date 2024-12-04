@@ -16,3 +16,19 @@ export const createBook = async (req, res) => {
     res.status(500).json({ message: "Error creating book" });
   }
 };
+
+export const deleteBook = async (req, res) => {
+  const { id } = req.params; 
+
+  try {
+    const deletedBook = await Book.findByIdAndDelete(id);
+
+    if (!deletedBook) {
+      return res.status(404).json({ message: "Libro no encontrado" });
+    }
+
+    res.status(200).json({ message: "Libro eliminado correctamente", deletedBook });
+  } catch (error) {
+    res.status(500).json({ message: "Error al eliminar el libro", error });
+  }
+};
