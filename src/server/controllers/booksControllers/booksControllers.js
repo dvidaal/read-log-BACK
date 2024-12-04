@@ -32,3 +32,20 @@ export const deleteBook = async (req, res) => {
     res.status(500).json({ message: "Error al eliminar el libro", error });
   }
 };
+
+export const editBook = async (req, res) => {
+  const { id } = req.params;
+  const updatedData = req.body;
+
+  try {
+    const editedBook = await Book.findByIdAndUpdate(id, updatedData, { new: true });
+
+    if (!editedBook) {
+      return res.status(404).json({ message: "Libro no encontrado" });
+    }
+
+    res.status(200).json({ editedBook });
+  } catch (error) {
+    res.status(500).json({ message: "Error al editar el libro", error });
+  }
+};
